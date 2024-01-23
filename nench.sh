@@ -132,7 +132,7 @@ then
 fi
 
 printf '%s\n' '-------------------------------------------------'
-printf ' nench.sh v2024.01.23 -- BI-V\n'
+printf ' nench.sh v2024.01.23    BI-V\n'
 date -u '+ benchmark timestamp:    %F %T UTC'
 printf '%s\n' '-------------------------------------------------'
 
