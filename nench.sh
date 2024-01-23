@@ -3,7 +3,11 @@
 ##########
 # nench.sh ("new bench.sh")
 # =========================
-# current version at https://github.com/n-st/nench
+# 
+# current version at https://github.com/bi-v/nench
+# with European POPS... 
+# 
+# original version at https://github.com/n-st/nench
 # - loosely based on the established freevps.us/bench.sh
 # - includes CPU and ioping measurements
 # - reduced number of speedtests (9 x 100 MB), while retaining useful European
@@ -12,6 +16,7 @@
 # Run using `curl -s bench.wget.racing | bash`
 # or `wget -qO- bench.wget.racing | bash`
 # - list of possibly required packages: curl,gawk,coreutils,util-linux,procps,ioping
+# 
 ##########
 
 command_exists()
@@ -127,7 +132,7 @@ then
 fi
 
 printf '%s\n' '-------------------------------------------------'
-printf ' nench.sh v2019.07.20 -- https://git.io/nench.sh\n'
+printf ' nench.sh v2024.01.23 -- BI-V\n'
 date -u '+ benchmark timestamp:    %F %T UTC'
 printf '%s\n' '-------------------------------------------------'
 
@@ -255,8 +260,8 @@ then
     printf '    your IPv4:    %s\n' "$(redact_ip "$ipv4")"
     printf '\n'
 
-    printf '    Cachefly CDN:         '
-    download_benchmark -4 http://cachefly.cachefly.net/100mb.test | \
+    printf '    VULTR, Frankfurt, DE:         '
+    download_benchmark -4 https://fra-de-ping.vultr.com/vultr.com.100MB.bin | \
         Bps_to_MiBps
 
     printf '    Leaseweb (NL):        '
