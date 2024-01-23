@@ -273,7 +273,7 @@ then
         Bps_to_MiBps
 
     printf '    Online.net (FR):      '
-    download_benchmark -4 http://ping6.online.net/100Mo.dat | \
+    download_benchmark -4 http://ping.online.net/100Mo.dat | \
         Bps_to_MiBps
 
     printf '    Webhosting24 (DE) Munich:         '
