@@ -253,7 +253,7 @@ printf '\n'
 
 # Network speedtests
 
-ipv4=$(curl -4 -s --max-time 5 https://ipipip.de/ip)
+ipv4=$(curl -4 -s --max-time 5 https://ipipip.de/ip/)
 if [ -n "$ipv4" ]
 then
     printf 'IPv4 speedtests\n'
@@ -286,7 +286,7 @@ fi
 
 printf '\n'
 
-ipv6=$(curl -6 -s --max-time 5 https://ipipip.de/ip)
+ipv6=$(curl -6 -s --max-time 5 https://ipipip.de/ip/)
 if [ -n "$ipv6" ]
 then
     printf 'IPv6 speedtests\n'
