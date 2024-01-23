@@ -260,12 +260,12 @@ then
     printf '    your IPv4:    %s\n' "$(redact_ip "$ipv4")"
     printf '\n'
 
-    printf '    VULTR, Frankfurt, DE:         '
+    printf '    VULTR (DE) Frankfurt:         '
     download_benchmark -4 https://fra-de-ping.vultr.com/vultr.com.100MB.bin | \
         Bps_to_MiBps
 
-    printf '    Leaseweb (NL):        '
-    download_benchmark -4 http://mirror.nl.leaseweb.net/speedtest/100mb.bin | \
+    printf '    Hetzner (DE) Falkenstein:        '
+    download_benchmark -4 https://fsn1-speed.hetzner.com/100MB.bin | \
         Bps_to_MiBps
 
     printf '    Softlayer DAL (US):   '
