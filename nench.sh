@@ -268,16 +268,16 @@ then
     download_benchmark -4 https://fsn1-speed.hetzner.com/100MB.bin | \
         Bps_to_MiBps
 
-    printf '    Softlayer DAL (US):   '
-    download_benchmark -4 http://speedtest.dal06.softlayer.com/downloads/test100.zip | \
+    printf '    OneCorp (DE) Dusseldorf:   '
+    download_benchmark -4 https://lg.onecorp.eu/100MB.test | \
         Bps_to_MiBps
 
     printf '    Online.net (FR):      '
-    download_benchmark -4 http://ping.online.net/100Mo.dat | \
+    download_benchmark -4 http://ping6.online.net/100Mo.dat | \
         Bps_to_MiBps
 
-    printf '    OVH BHS (CA):         '
-    download_benchmark -4 http://speedtest-bhs.as16276.ovh/files/100Mio.dat | \
+    printf '    Webhosting24 (DE) Munich:         '
+    download_benchmark -4 http://194.39.205.4/100MB.test | \
         Bps_to_MiBps
 
 else
