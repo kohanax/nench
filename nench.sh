@@ -253,7 +253,7 @@ printf '\n'
 
 # Network speedtests
 
-ipv4=$(curl -4 -s --max-time 5 http://icanhazip.com/)
+ipv4=$(curl -4 -s --max-time 5 http://ipipip.de/ip)
 if [ -n "$ipv4" ]
 then
     printf 'IPv4 speedtests\n'
@@ -261,15 +261,15 @@ then
     printf '\n'
 
     printf '    VULTR (DE) Frankfurt:         '
-    download_benchmark -4 https://fra-de-ping.vultr.com/vultr.com.100MB.bin | \
+    download_benchmark -4 http://fra-de-ping.vultr.com/vultr.com.100MB.bin | \
         Bps_to_MiBps
 
     printf '    Hetzner (DE) Falkenstein:        '
-    download_benchmark -4 https://fsn1-speed.hetzner.com/100MB.bin | \
+    download_benchmark -4 http://fsn1-speed.hetzner.com/100MB.bin | \
         Bps_to_MiBps
 
     printf '    OneCorp (DE) Dusseldorf:   '
-    download_benchmark -4 https://lg.onecorp.eu/100MB.test | \
+    download_benchmark -4 http://lg.onecorp.eu/100MB.test | \
         Bps_to_MiBps
 
     printf '    Online.net (FR):      '
@@ -286,7 +286,7 @@ fi
 
 printf '\n'
 
-ipv6=$(curl -6 -s --max-time 5 http://icanhazip.com/)
+ipv6=$(curl -6 -s --max-time 5 http://ipipip.de/ip)
 if [ -n "$ipv6" ]
 then
     printf 'IPv6 speedtests\n'
@@ -297,16 +297,16 @@ then
     download_benchmark -6 http://mirror.nl.leaseweb.net/speedtest/100mb.bin | \
         Bps_to_MiBps
 
-    printf '    Softlayer DAL (US):   '
-    download_benchmark -6 http://speedtest.dal06.softlayer.com/downloads/test100.zip | \
+    printf '    ETH (DE) Frankfurt:   '
+    download_benchmark -6 http://lg.eth-services.de/100MB.test | \
         Bps_to_MiBps
 
     printf '    Online.net (FR):      '
     download_benchmark -6 http://ping6.online.net/100Mo.dat | \
         Bps_to_MiBps
 
-    printf '    OVH BHS (CA):         '
-    download_benchmark -6 http://speedtest-bhs.as16276.ovh/files/100Mio.dat | \
+    printf '    Webhosting24 (DE) Munich:         '
+    download_benchmark -6 http://[2a0c:8fc0:0:100:cafe:babe:502:bc0b]/100MB.test | \
         Bps_to_MiBps
 
 else
