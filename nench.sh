@@ -280,6 +280,10 @@ then
     download_benchmark -4 http://194.39.205.4/100MB.test | \
         Bps_to_MiBps
 
+    printf '    BlueVPS (EE) Tallinn :         '
+    download_benchmark -4 https://tll-speedtest.lg.bluevps.com/100MB.bin | \
+        Bps_to_MiBps
+        
     printf '    FirstVDS (RU) Khimki:         '
     download_benchmark -4 http://185.43.4.155/100.mb | \
         Bps_to_MiBps
