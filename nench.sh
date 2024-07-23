@@ -4,7 +4,7 @@
 # nench.sh ("new bench.sh")
 # =========================
 # 
-# current version at https://github.com/bi-v/nench
+# current version at https://github.com/kohanax/nench
 # with European POPS... 
 # 
 # original version at https://github.com/n-st/nench
@@ -132,7 +132,7 @@ then
 fi
 
 printf '%s\n' '-------------------------------------------------'
-printf ' nench.sh v2024.01.23    BI-V\n'
+printf ' nench.sh v2024.01.23    kohanax\n'
 date -u '+ benchmark timestamp:    %F %T UTC'
 printf '%s\n' '-------------------------------------------------'
 
@@ -140,7 +140,7 @@ printf '\n'
 
 if ! command_exists ioping
 then
-    curl -s --max-time 10 -o ioping.static https://github.com/bi-v/nench/raw/master/ioping.static
+    curl -s --max-time 10 -o ioping.static https://github.com/kohanax/nench/raw/master/ioping.static
     chmod +x ioping.static
     ioping_cmd="./ioping.static"
 else
