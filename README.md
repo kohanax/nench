@@ -1,7 +1,7 @@
 nench.sh ("new bench.sh")
 =========================
 
-Current version always available at https://github.com/n-st/nench
+Current version always available at https://github.com/kohanax/nench
 
 IPv4- and v6-enabled download at http://wget.racing/nench.sh
 
@@ -44,11 +44,7 @@ Usage example
 -------------
 
 ```
-(curl -s wget.racing/nench.sh | bash; curl -s wget.racing/nench.sh | bash) 2>&1 | tee nench.log
-```
-
-```
-(wget -qO- wget.racing/nench.sh | bash; wget -qO- wget.racing/nench.sh | bash) 2>&1 | tee nench.log
+(curl -s https://raw.githubusercontent.com/kohanax/nench/master/nench.sh | bash; curl -s https://raw.githubusercontent.com/kohanax/nench/master/nench.sh | bash) 2>&1 | tee nench.log
 ```
 
 Example output
