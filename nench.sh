@@ -132,7 +132,7 @@ then
 fi
 
 printf '%s\n' '-------------------------------------------------'
-printf ' nench.sh v2024.01.23    kohanax\n'
+printf ' nench.sh v2024.07.23    kohanax\n'
 date -u '+ benchmark timestamp:    %F %T UTC'
 printf '%s\n' '-------------------------------------------------'
 
@@ -253,7 +253,7 @@ printf '\n'
 
 # Network speedtests
 
-ipv4=$(curl -4 -s --max-time 5 https://ipipip.de/ip/)
+ipv4=$(curl -4 -s --max-time 5 https://ipipip.de/ip)
 if [ -n "$ipv4" ]
 then
     printf 'IPv4 speedtests\n'
@@ -280,13 +280,18 @@ then
     download_benchmark -4 http://194.39.205.4/100MB.test | \
         Bps_to_MiBps
 
+    printf '    FirstVDS (RU) Khimki:         '
+    download_benchmark -4 http://185.43.4.155/100.mb | \
+        Bps_to_MiBps
+
+
 else
     printf 'No IPv4 connectivity detected\n'
 fi
 
 printf '\n'
 
-ipv6=$(curl -6 -s --max-time 5 https://ipipip.de/ip/)
+ipv6=$(curl -6 -s --max-time 5 https://ipipip.de/ip)
 if [ -n "$ipv6" ]
 then
     printf 'IPv6 speedtests\n'
@@ -309,6 +314,9 @@ then
     download_benchmark -6 http://[2a0c:8fc0:0:100:cafe:babe:502:bc0b]/100MB.test | \
         Bps_to_MiBps
 
+    printf '    FirstVDS (RU) Khimki:             '
+    download_benchmark -6 http://[2a01:230:2:39::f]/100.mb | \
+        Bps_to_MiBps
 else
     printf 'No IPv6 connectivity detected\n'
 fi
